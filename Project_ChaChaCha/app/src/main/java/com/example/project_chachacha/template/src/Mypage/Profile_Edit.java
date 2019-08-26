@@ -9,34 +9,36 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.project_chachacha.R;
 
 
-public class Mypage_main extends Fragment {
+public class Profile_Edit extends Fragment {
 
-    TextView mTvEdit;
+    ImageView mIvback;
+    TextView mTvcommit;
 
-    public static Mypage_main newInstance(){
-        return new Mypage_main();
+    public static Profile_Edit newInstance(){
+        return new Profile_Edit();
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_mypage_main,null);
-        mTvEdit = (TextView)view.findViewById(R.id.edit);
-        mTvEdit.setOnClickListener(new View.OnClickListener() {
+        View view = inflater.inflate(R.layout.fragment_profile__edit,null);
+        mIvback = view.findViewById(R.id.back);
+        mIvback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((Mypage)getActivity()).replaceFragment(Profile_Edit.newInstance());
+                ((Mypage)getActivity()).replaceFragment(Mypage_main.newInstance());
             }
         });
+        mTvcommit = view.findViewById(R.id.commit);
         // Inflate the layout for this fragment
         return view;
-//        return inflater.inflate(R.layout.fragment_mypage_main, container, false);
+//        return inflater.inflate(R.layout.fragment_profile__edit, container, false);
     }
-
-
 
 }

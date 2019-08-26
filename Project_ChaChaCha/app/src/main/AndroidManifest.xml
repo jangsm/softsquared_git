@@ -17,8 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".template.src.Register.Register_Success" />
-        <activity android:name=".template.src.Register.Register_customer">
-        </activity>
+        <activity android:name=".template.src.Register.Register_customer"></activity>
         <activity android:name=".template.src.Login.Login" />
         <activity android:name=".template.src.Splash.Splash" />
     </application>

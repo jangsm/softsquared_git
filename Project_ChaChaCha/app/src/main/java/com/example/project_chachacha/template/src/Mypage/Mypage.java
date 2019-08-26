@@ -1,6 +1,7 @@
 package com.example.project_chachacha.template.src.Mypage;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -27,5 +28,11 @@ public class Mypage extends BaseActivity {
         transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.frame_layout,mypage_main).commitAllowingStateLoss();
 
+    }
+
+    public void replaceFragment(Fragment fragment){
+        fragmentManager = getSupportFragmentManager();
+        transaction = fragmentManager.beginTransaction();
+        transaction.replace(R.id.frame_layout, fragment).commitAllowingStateLoss();
     }
 }
